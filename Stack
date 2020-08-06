@@ -1,0 +1,72 @@
+Module VBModule
+
+dim myStack(5) As String  ' Array Declared
+dim TOS as Integer  'top of stack pointer
+'Input Function 
+function menu() as integer 
+ dim choice as Integer 
+ console.writeline ("1. Push ")
+  console.writeline ("2. POP ")
+ console.writeline ("3. search ")
+ console.writeline ("4. print ")
+console.writeline ("5.Quit ")
+ console.writeline ("Enter your choice")
+ Do
+ choice = console.readline()
+  if choice <1 or choice >5 then 
+  console.writelinen("Invalid")
+  else 
+  return choice
+  end if 
+ loop
+ end function 
+ 
+ ' Ending Inout function 
+ 
+ 'Class of Stack 
+ ' Sub to Declare Array 
+ sub create ()
+ dim x as integer 
+ for x = 1 to 5 
+  myStack(x) = "*" ' Array Declaration & Dummy Values Insertions
+  Next 
+  TOS = 0 ' 0 is null pointer
+  end sub
+  ' End sub of array Declaration 
+  
+  ' POP function 
+  function pop() as string 
+  if TOS = 0 then 
+  pop = " Wrong"
+  else 
+  pop = " Pop Value : " & myStack(TOS)
+  TOS = TOS -1
+  end if 
+  end function 
+ ' End of function POP 
+ 
+ 'Push Function 
+ sub push (newData as String)
+ if TOS = 5 then 
+ console.writleline("Stack Overflow")
+ else 
+ TOS + 1 
+ myStack (TOS) = newData
+ End if 
+ End Function 
+ ' Push Function Ends
+ 
+ 
+ 
+ 
+ ' End Class of stack 
+
+
+
+sub main ()
+Do 
+end sub 
+
+
+
+End Module

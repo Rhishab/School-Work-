@@ -14,14 +14,14 @@ console.writeline ("5.Quit ")
  Do
  choice = console.readline()
   if choice <1 or choice >5 then 
-  console.writelinen("Invalid")
+  console.writeline("Invalid")
   else 
   return choice
   end if 
  loop
  end function 
  
- ' Ending Inout function 
+ ' Ending Input function 
  
  'Class of Stack 
  ' Sub to Declare Array 
@@ -48,13 +48,25 @@ console.writeline ("5.Quit ")
  'Push Function 
  sub push (newData as String)
  if TOS = 5 then 
- console.writleline("Stack Overflow")
+ console.writeline("Stack Overflow")
  else 
  TOS + 1 
  myStack (TOS) = newData
  End if 
- End Function 
+ End sub
  ' Push Function Ends
+ 
+'  Print Function 
+sub print ()
+dim x as integer
+for x = TOS to 1 step -1 
+Console.Writeline(vbTab & myStack(x))
+Next 
+
+end sub 
+
+ 
+ 
  
  
  
@@ -65,6 +77,28 @@ console.writeline ("5.Quit ")
 
 sub main ()
 Do 
+Select Case menu()
+case 1
+console.writeline("1) Push - Enter input data")
+call push(console.readline)
+case 2
+console.writeline("2) POP")
+' case 3 
+' console.writeline("Enter data to search : ")
+' if search (console.Readline) then 
+' console.writeline("Found in Stack ")
+' else 
+' console.writeline("Not found in stack ")
+' end if 
+case 4
+console.writeline("Priting ")
+call print()
+case 5 
+End
+End Select 
+loop
+
+
 end sub 
 
 

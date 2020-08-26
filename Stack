@@ -83,6 +83,7 @@ console.writeline("1) Push - Enter input data")
 call push(console.readline)
 case 2
 console.writeline("2) POP")
+call pop()
 ' case 3 
 ' console.writeline("Enter data to search : ")
 ' if search (console.Readline) then 

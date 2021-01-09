@@ -1,5 +1,8 @@
 1) Delcaring Stack and Top of Stack pointer
-
+                       ________________________________________________________
+                       ________________________________________________________
+_                      _______________________________________________________
+ 
 '                             Online VB Compiler.
 '                 Code, Compile, Run and Debug VB program online.
 ' Write your code in this editor and press "Run" button to execute it.
@@ -27,3 +30,33 @@ Dim TOS as Integer ' top of Stack pointer
     TOS = 0 ' Represents Top of Stack pointer 
     end sub
 End Module
+
+_____________________________________________________________________________-
+
+2) Push 
+
+ sub push (NewData as string)
+    if TOS = 5 then console.Writeline("Stack Overflow")
+    else 
+    TOS = TOS + 1 
+    myStack(TOS) = NewData
+    End if 
+    End sub
+    _______________________________________________________________
+    
+   3) POp 
+   function pop() As stirng
+    If TOS = 0 then pop = ("Empty Stack ")
+    else 
+    pop =  "Popped value = " & myStack(Tos)
+    TOS = TOS - 1
+    return pop
+    end if 
+    
+    end function
+    _____________________________________________________________________
+       
+    4) Search 
+    
+    
+

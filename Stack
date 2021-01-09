@@ -1,107 +1,29 @@
+1) Delcaring Stack and Top of Stack pointer
+
+'                             Online VB Compiler.
+'                 Code, Compile, Run and Debug VB program online.
+' Write your code in this editor and press "Run" button to execute it.
+
+
 Module VBModule
 
-dim myStack(5) As String  ' Array Declared
-dim TOS as Integer  'top of stack pointer
-'Input Function 
-function menu() as integer 
- dim choice as Integer 
- console.writeline ("1. Push ")
-  console.writeline ("2. POP ")
- console.writeline ("3. search ")
- console.writeline ("4. print ")
-console.writeline ("5.Quit ")
- console.writeline ("Enter your choice")
- Do
- choice = console.readline()
-  if choice <1 or choice >5 then 
-  console.writeline("Invalid")
-  else 
-  return choice
-  end if 
- loop
- end function 
- 
- ' Ending Input function 
- 
- 'Class of Stack 
- ' Sub to Declare Array 
- sub create ()
- dim x as integer 
- for x = 1 to 5 
-  myStack(x) = "*" ' Array Declaration & Dummy Values Insertions
-  Next 
-  TOS = 0 ' 0 is null pointer
-  end sub
-  ' End sub of array Declaration 
-  
-  ' POP function 
-  function pop() as string 
-  if TOS = 0 then 
-  pop = " Wrong"
-  else 
-  pop = " Pop Value : " & myStack(TOS)
-  TOS = TOS -1
-  end if 
-  end function 
- ' End of function POP 
- 
- 'Push Function 
- sub push (newData as String)
- if TOS = 5 then 
- console.writeline("Stack Overflow")
- else 
- TOS + 1 
- myStack (TOS) = newData
- End if 
- End sub
- ' Push Function Ends
- 
-'  Print Function 
-sub print ()
-dim x as integer
-for x = TOS to 1 step -1 
-Console.Writeline(vbTab & myStack(x))
-Next 
-
-end sub 
-
- 
- 
- 
- 
- 
- 
- ' End Class of stack 
-
-
-
-sub main ()
-Do 
-Select Case menu()
-case 1
-console.writeline("1) Push - Enter input data")
-call push(console.readline)
-case 2
-console.writeline("2) POP")
-call pop()
-' case 3 
-' console.writeline("Enter data to search : ")
-' if search (console.Readline) then 
-' console.writeline("Found in Stack ")
-' else 
-' console.writeline("Not found in stack ")
-' end if 
-case 4
-console.writeline("Priting ")
-call print()
-case 5 
-End
-End Select 
-loop
-
-
-end sub 
-
-
-
+Dim myStack(5) As string
+Dim TOS as Integer ' top of Stack pointer
+        
+   Sub Main()
+        'STack 
+        'Define and delcare a stack and it's pointer
+        
+        Dim myStack(5) As string
+        Dim TOS as Integer ' top of Stack pointer
+        
+    End Sub
+    
+    Sub create()
+    dim x as Integer
+    for x = 1 to 5
+    myStack(x) = 0 'declaration 
+    next
+    TOS = 0 ' Represents Top of Stack pointer 
+    end sub
 End Module
